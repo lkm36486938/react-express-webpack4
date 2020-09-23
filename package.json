@@ -6,6 +6,7 @@
     "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
@@ -27,7 +28,8 @@
     "webpack-merge": "^5.1.4"
   },
   "scripts": {
-    "start": "webpack --config ./webpack.prod.js",
+    "start": "npm run build && nodemon ./server.js",
+    "build": "webpack --config ./webpack.prod.js",
     "dev": "webpack-dev-server --config ./webpack.dev.js"
   },
   "eslintConfig": {
